@@ -1,5 +1,118 @@
-h1 {
-  color: blue;
+@font-face {
+  font-family: "WixMadeforText-Medium";
+  src: url("./assets/fonts/WixMadeforText-Medium.woff2") format("woff2"), url("./assets/fonts//WixMadeforText-Medium.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "WixMadeforDisplay-SemiBold";
+  src: url("./assets/fonts/WixMadeforDisplay-SemiBold.woff2") format("woff2"), url("./assets/fonts/WixMadeforDisplay-SemiBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "WixMadeforText-SemiBold";
+  src: url("./assets/fonts/WixMadeforText-SemiBold.woff2") format("woff2"), url("./fonts/WixMadeforText-SemiBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "WixMadeforDisplay-Bold";
+  src: url("./assets/fonts/WixMadeforDisplay-Bold.woff2") format("woff2"), url("./fonts/WixMadeforDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("./assets/fonts/Roboto-Bold.woff2") format("woff2"), url("./assets/fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "WixMadeforTextRegular";
+  src: url("./assets/fonts/WixMadeforTextRegular.woff2") format("woff2"), url("./assets/fonts/WixMadeforTextRegular.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  max-width: 100%;
+  font-family: "WixMadeforTextRegular";
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.container {
+  min-width: 1512px;
+  border: 1px solid black;
+}
+
+.calculation {
+  background-color: #161616;
+  display: grid;
+  grid-template-columns: 2fr 5vw;
+  padding: 1vh 0;
+}
+.calculation__wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.calculation__descr {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+.calculation__text1, .calculation__text2, .calculation__text3 {
+  color: white;
+}
+.calculation__text1 {
+  position: relative;
+}
+.calculation__text1::before {
+  content: url("./assets/images/lightning.svg");
+  display: inline-flex;
+  right: 70px;
+  position: absolute;
+}
+.calculation__close {
+  background-color: transparent;
+  border: none;
+  text-align: right;
+  padding: 0 1.5vw 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */

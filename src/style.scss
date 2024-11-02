@@ -1,3 +1,52 @@
-h1 {
-    color: blue;
+@import './fonts.scss';
+@import './settings.scss';
+
+.container {
+    min-width: 1512px;
+    border: 1px solid black;
+}
+
+.calculation {
+    background-color: #161616;
+    display: grid;
+    grid-template-columns: 2fr 5vw;
+    padding: 1vh 0;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    &__descr {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+
+    }
+
+    &__text1,
+    &__text2,
+    &__text3 {
+        color: white;
+    }
+
+    &__text1 {
+        position: relative;
+    }
+
+    &__text1::before {
+        content: url('./assets/images/lightning.svg');
+        display: inline-flex;
+        right: 70px;
+        position: absolute;
+    }
+
+    &__close {
+        background-color: transparent;
+        border: none;
+        text-align: right;
+        padding: 0 1.5vw 0 0;
+    }
 }
