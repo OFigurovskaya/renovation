@@ -1,7 +1,7 @@
 @font-face {
   font-family: "WixMadeforText-Medium";
   src: url("./assets/fonts/WixMadeforText-Medium.woff2") format("woff2"), url("./assets/fonts//WixMadeforText-Medium.woff") format("woff");
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -36,7 +36,7 @@
 @font-face {
   font-family: "WixMadeforTextRegular";
   src: url("./assets/fonts/WixMadeforTextRegular.woff2") format("woff2"), url("./assets/fonts/WixMadeforTextRegular.woff") format("woff");
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -83,21 +83,24 @@ body {
   background-color: #161616;
   display: grid;
   grid-template-columns: 2fr 5vw;
-  padding: 1vh 0;
+  padding: 0.5vh 0;
 }
 .calculation__wrapper {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 66% 34%;
 }
 .calculation__descr {
   display: flex;
   margin: 0 auto;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 1vw;
+  width: 90%;
 }
 .calculation__text1, .calculation__text2, .calculation__text3 {
   color: white;
+  font-size: calc((1vw + 1vh) * 0.51);
+  font-family: "WixMadeforTextRegular";
 }
 .calculation__text1 {
   position: relative;
@@ -105,8 +108,29 @@ body {
 .calculation__text1::before {
   content: url("./assets/images/lightning.svg");
   display: inline-flex;
-  right: 70px;
+  top: -5px;
+  right: 60px;
   position: absolute;
+}
+.calculation__text2 {
+  display: block;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: #2D2D2D;
+}
+.calculation__btn {
+  border: 2px solid black;
+  border-radius: 10px;
+  max-width: 11vw;
+  position: relative;
+  padding: 0 auto;
+}
+.calculation__btn::after {
+  content: url("./assets/images/arrow.svg");
+  display: inline-flex;
+  right: -10px;
+  position: relative;
 }
 .calculation__close {
   background-color: transparent;

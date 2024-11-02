@@ -1,0 +1,33 @@
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  max-width: 100%;
+  font-family: "WixMadeforTextRegular";
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+}/*# sourceMappingURL=settings.css.map */

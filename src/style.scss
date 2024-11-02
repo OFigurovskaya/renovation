@@ -1,5 +1,6 @@
 @import './fonts.scss';
 @import './settings.scss';
+@import './colors.scss';
 
 .container {
     min-width: 1512px;
@@ -10,26 +11,28 @@
     background-color: #161616;
     display: grid;
     grid-template-columns: 2fr 5vw;
-    padding: 1vh 0;
+    padding: 0.5vh 0;
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 66% 34%;
     }
 
     &__descr {
         display: flex;
         margin: 0 auto;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         gap: 1vw;
-
+        width: 90%;
     }
 
     &__text1,
     &__text2,
     &__text3 {
         color: white;
+        font-size: calc($sizeindex * 0.51);
+        font-family: 'WixMadeforTextRegular';
     }
 
     &__text1 {
@@ -39,9 +42,36 @@
     &__text1::before {
         content: url('./assets/images/lightning.svg');
         display: inline-flex;
-        right: 70px;
+        top: -5px;
+        right: 60px;
         position: absolute;
     }
+
+    &__text2 {
+        display: block;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 25px;
+        background-color: #2D2D2D;
+    }
+
+    &__btn {
+        border: 2px solid black;
+        border-radius: 10px;
+        max-width: 11vw;
+        position: relative;
+        padding: 0 auto;
+    }
+
+    &__btn::after {
+        content: url('./assets/images/arrow.svg');
+        display: inline-flex;
+        right: -10px;
+        position: relative;
+    }
+
+
+
 
     &__close {
         background-color: transparent;
