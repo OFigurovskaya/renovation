@@ -6,12 +6,14 @@ close.addEventListener('click', () => {
     calculation.style.display = 'none'
 })
 
-const sliderBig = document.querySelector('.repair__sliderBig');
+const sliderBig = document.querySelector('.text-wrapper');
 const slider = document.querySelector('.slider');
 let toggle = false;
 sliderBig.addEventListener('touchmove', slide, false);
 function slide()  {
     slider.style.visibility =  toggle ? 'hidden' : 'visible';
+
+    console.log(slider);
 } 
 
 sliderBig.addEventListener('touchend', () => {

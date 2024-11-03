@@ -1,4 +1,4 @@
-@media (min-width: 769px) and  (max-width: 1250px) {
+@media (min-width: 769px) and (max-width: 1250px) {
     body {
         background-color: red;
     }
@@ -22,12 +22,35 @@
             width: 19vw;
         }
     }
+
+    
 }
 
 @media(min-width: 1900px) {
     .calculation {
         &__text1::before {
             margin-right: 80px;
+        }
+    }
+
+    .repair {
+        &__title {
+            font-size: calc($sizeindex * 1.5);
+            width: 70vw;
+        }
+
+        &__descr {
+            font-size: calc($sizeindex * 0.55);
+            width: 70vw;
+            margin-bottom: 5%;
+        }
+
+        .text-wrapper {
+            padding: 2.5% 4%;
+        }
+
+        &__button {
+            padding: 1.2% 0;
         }
     }
 }

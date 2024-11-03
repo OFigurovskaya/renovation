@@ -108,7 +108,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        
+
 
         .text {
             display: inline-block;
@@ -161,7 +161,7 @@
 
     &__menu {
         margin: 0 auto;
-       
+
 
         .wrapper {
             color: $blue;
@@ -183,7 +183,7 @@
     .social {
         display: flex;
         gap: 7px;
-       
+
     }
 }
 
@@ -193,7 +193,7 @@
 //repair
 .repair {
     position: relative;
-    
+
 
     &__sliderBig {
         background-image: url('./assets/images/SliderAll.png');
@@ -217,17 +217,16 @@
     }
 
     .text-wrapper {
-        background-color: red;
-        z-index: 9999;
         position: absolute;
         padding: 5.5% 4%;
+        width: 90%;
     }
 
     &__title {
         color: white;
         font-size: calc($sizeindex * 2.1);
         font-family: 'WixMadeforDisplay-Bold';
-        width: 30vw;
+        width: 35%;
         line-height: 116%;
         margin-bottom: 3vh;
     }
@@ -237,43 +236,22 @@
         font-size: calc($sizeindex * 0.72);
         font-family: 'WixMadeforText-Medium';
         line-height: 140%;
-        width: 30vw;
+        width: 35%;
+        margin-bottom: 4vh;
     }
-    
 
-    // .swiper-wrapper {
-    //     position: relative;
-    
-    //   }
-    
-    //   .swiper {
-    //     position: relative;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //   }
-    
-    
-    //   .swiper-slide {
-    //     position: relative;
-    //     top: 0;
-    //     bottom: 0;
-    //     width: 100%;
-    //     padding: 0 10px;
-    //   }
-    
-    
-    //   .swiper-slide:nth-child(2n) {
-    //     background-image: url('./assets/images/Slider1.png');
-    //     background-repeat: no-repeat;
-    //     border-radius: 32px;
-    //     background-position: right;
-    //   }
-    
-    
+    &__order {
+        display: flex;
+        gap: 13px;
+    }
 
- 
+    &__button {
+        width: 16%;
+        padding: 1.5% 0;
+        font-size: calc($sizeindex * 0.65);
+        font-family: 'WixMadeforDisplay-Bold';
+    }
+
 }
 
 
