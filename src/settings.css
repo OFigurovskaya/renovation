@@ -30,4 +30,18 @@ body {
 
 .container {
   margin: 0 auto;
+}
+
+.textAll {
+  font-family: "WixMadeforText-Medium";
+  font-size: calc((1vw + 1vh) * 0.53);
+}
+
+.btnBlue {
+  background-color: #1455FD;
+  color: #FFFFFF;
+  font-family: "WixMadeforText-Medium";
+  font-size: calc((1vw + 1vh) * 0.5);
+  border-radius: 15px;
+  border-color: #1455FD;
 }/*# sourceMappingURL=settings.css.map */

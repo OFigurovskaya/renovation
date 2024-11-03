@@ -1,7 +1,7 @@
 @font-face {
   font-family: "WixMadeforText-Medium";
   src: url("./assets/fonts/WixMadeforText-Medium.woff2") format("woff2"), url("./assets/fonts//WixMadeforText-Medium.woff") format("woff");
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -74,9 +74,23 @@ body {
   margin: 0 auto;
 }
 
+.textAll {
+  font-family: "WixMadeforText-Medium";
+  font-size: calc((1vw + 1vh) * 0.53);
+}
+
+.btnBlue {
+  background-color: #1455FD;
+  color: #FFFFFF;
+  font-family: "WixMadeforText-Medium";
+  font-size: calc((1vw + 1vh) * 0.5);
+  border-radius: 15px;
+  border-color: #1455FD;
+}
+
 .container {
-  min-width: 1512px;
-  border: 1px solid black;
+  min-width: 90%;
+  margin: 40px auto;
 }
 
 .calculation {
@@ -84,10 +98,13 @@ body {
   display: grid;
   grid-template-columns: 2fr 5vw;
   padding: 0.5vh 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .calculation__wrapper {
   display: grid;
-  grid-template-columns: 66% 34%;
+  grid-template-columns: 68% 32%;
 }
 .calculation__descr {
   display: flex;
@@ -109,12 +126,12 @@ body {
   content: url("./assets/images/lightning.svg");
   display: inline-flex;
   top: -5px;
-  right: 60px;
+  right: 4vw;
   position: absolute;
 }
 .calculation__text2 {
   display: block;
-  padding: 5px;
+  padding: 5px 10px;
   border: 2px solid black;
   border-radius: 25px;
   background-color: #2D2D2D;
@@ -124,7 +141,9 @@ body {
   border-radius: 10px;
   max-width: 11vw;
   position: relative;
-  padding: 0 auto;
+  font-size: calc((1vw + 1vh) * 0.51);
+  font-family: "WixMadeforTextRegular";
+  cursor: pointer;
 }
 .calculation__btn::after {
   content: url("./assets/images/arrow.svg");
@@ -137,6 +156,150 @@ body {
   border: none;
   text-align: right;
   padding: 0 1.5vw 0 0;
+  cursor: pointer;
 }
 
-/*# sourceMappingURL=style.css.map */
+.header {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1fr;
+  padding: 1.3vh 3.5vw;
+}
+.header__logo {
+  display: grid;
+  grid-template-columns: 0.27fr 1fr;
+  align-items: center;
+}
+.header__social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.header__social .text {
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+}
+.header__connection {
+  display: grid;
+  grid-template-columns: 1.6fr 1.3fr 0.7fr;
+  align-items: center;
+  justify-items: center;
+}
+.header__phone {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
+}
+.header .phone {
+  display: grid;
+  grid-row: 1/3;
+  font-size: calc((1vw + 1vh) * 0.55);
+  font-weight: 600;
+}
+.header .chat {
+  display: grid;
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+.header__consultation {
+  display: flex;
+  align-items: center;
+  padding: 3% 0 3% 3%;
+  width: 12vw;
+  justify-content: center;
+  gap: 5px;
+}
+.header__consultation .icons a:last-child {
+  margin-left: -5px;
+}
+.header__menu {
+  margin: 0 auto;
+}
+.header__menu .wrapper {
+  color: #1455FD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F6FF;
+  border: 1px solid #F4F6FF;
+  border-radius: 12px;
+  padding: 20%;
+}
+.header__menu .wrapper p {
+  margin-right: 10px;
+  font-size: calc((1vw + 1vh) * 0.55);
+}
+.header .social {
+  display: flex;
+  gap: 7px;
+}
+
+.repair {
+  position: relative;
+}
+.repair__sliderBig {
+  background-image: url("./assets/images/SliderAll.png");
+  background-repeat: no-repeat;
+  background-color: #000;
+  background-position: right;
+  width: 100vw;
+  height: 592px;
+  border-radius: 55px;
+  position: absolute;
+}
+.repair .slider {
+  background-image: url("./assets/images/Slider1.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 592px;
+  border-radius: 55px;
+  visibility: hidden;
+  transition: 0.3s all ease-in-out;
+}
+.repair .text-wrapper {
+  background-color: red;
+  z-index: 9999;
+  position: absolute;
+  padding: 5.5% 4%;
+}
+.repair__title {
+  color: white;
+  font-size: calc((1vw + 1vh) * 2.1);
+  font-family: "WixMadeforDisplay-Bold";
+  width: 30vw;
+  line-height: 116%;
+  margin-bottom: 3vh;
+}
+.repair__descr {
+  color: white;
+  font-size: calc((1vw + 1vh) * 0.72);
+  font-family: "WixMadeforText-Medium";
+  line-height: 140%;
+  width: 30vw;
+}
+
+@media (min-width: 769px) and (max-width: 1250px) {
+  body {
+    background-color: red;
+  }
+  .container {
+    width: 100%;
+  }
+  .calculation__btn {
+    min-width: 20vw;
+    background-color: red;
+  }
+  .header {
+    background-color: green;
+    grid-template-columns: 0.7fr 1fr 1.8fr;
+  }
+  .header__consultation {
+    width: 19vw;
+  }
+}
+@media (min-width: 1900px) {
+  .calculation__text1::before {
+    margin-right: 80px;
+  }
+}/*# sourceMappingURL=style.css.map */

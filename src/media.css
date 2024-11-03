@@ -1,0 +1,24 @@
+@media (min-width: 769px) and (max-width: 1250px) {
+  body {
+    background-color: red;
+  }
+  .container {
+    width: 100%;
+  }
+  .calculation__btn {
+    min-width: 20vw;
+    background-color: red;
+  }
+  .header {
+    background-color: green;
+    grid-template-columns: 0.7fr 1fr 1.8fr;
+  }
+  .header__consultation {
+    width: 19vw;
+  }
+}
+@media (min-width: 1900px) {
+  .calculation__text1::before {
+    margin-right: 80px;
+  }
+}/*# sourceMappingURL=media.css.map */

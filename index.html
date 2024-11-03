@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <title>Document</title>
 </head>
 
@@ -20,16 +21,16 @@
                 </div>
                 <button class="calculation__btn"> Рассчитать online</button>
             </div>
-            <button class="calculation__close"><a href=""><img src="./src/assets/images/Close.svg" alt="icon"></a></button>
+            <button class="calculation__close"><img src="./src/assets/images/Close.svg" alt="icon"></button>
         </div>
 
         <header class="header">
             <div class="header__logo">
                 <img src="./src/assets/images/logo.png" alt="" class="logo">
-                <p class="text">Ремонт квартир в Краснодаре</p>
+                <p class="text textAll">Ремонт квартир в Краснодаре</p>
             </div>
             <div class="header__social">
-                <p class="text">Мы на платформах</p>
+                <p class="text textAll">Мы на платформах</p>
                 <div class="social">
                     <a href="https://t.me/example_user"><img src="./src/assets/images/telegram 4.svg" alt="icon"
                             class="social__icon"></a>
@@ -48,14 +49,12 @@
                         <img src="./src/assets/images/photoChat.png" alt="icon" class="chat__icon">
                     </div>
                 </div>
-                <button class="header__consultation">
-                    <a href="">
-                        <p class="text">Консультация</p>
-                        <div class="icons">
-                            <a href="https://wa.me/79200000000"> <img src="./src/assets/images/WA.svg" alt="icon"></a>
-                            <a href="https://t.me/example_user"><img src="./src/assets/images/TL2.svg" alt="icon"></a>
-                        </div>
-                    </a>
+                <button class="header__consultation btnBlue">
+                    <p class="text">Консультация</p>
+                    <div class="icons">
+                        <a href="https://wa.me/79200000000"> <img src="./src/assets/images/WA.svg" alt="icon"></a>
+                        <a href="https://t.me/example_user"><img src="./src/assets/images/TL2.svg" alt="icon"></a>
+                    </div>
                 </button>
                 <div class="header__menu">
                     <button class="wrapper">
@@ -69,14 +68,23 @@
         <main>
             <div class="repair">
                 <div class="repair__sliderBig">
+                    <div class="slider"></div>
+                    <!-- <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div> -->
+                </div>
+                <div class="text-wrapper">
                     <h2 class="repair__title">Комплексный ремонт квартир в Краснодаре</h2>
-                    <p class="repair__descr">Создаем ремонт, от 8 000 руб./м2, с гарантией по договору, воплощая идею
+                    <p class="repair__descr">Создаем ремонт, от 8 000 руб./м2, с гарантией по договору, воплощая
+                        идею
                         день в день с указанным сроком</p>
                     <div class="repair__order">
-                        <button class="repair__button"><a href="">Заказать ремонт</a></button>
+                        <button class="repair__button btnBlue"><a href="">Заказать ремонт</a></button>
                     </div>
                     <img src="./src/assets/images/vector1.svg" alt="" class="repair__vector">
                 </div>
+
                 <div class="repair__blocks">
                     <div class="block">
                         <p>Возможность дистанционного ремонта</p>
@@ -93,6 +101,7 @@
                     </div>
                 </div>
             </div>
+
 
             <div class="prices">
                 <div class="prices__header">
@@ -160,7 +169,7 @@
                             </select>
                             <input type="text" placeholder="WhatsApp">
                         </div>
-                        <button class="conctacts__contract">
+                        <button class="conctacts__contract btnBlue">
                             <a href="#">Договориться о времени просмотра</a>
                         </button>
                         <div class="conctacts__mess">
@@ -201,7 +210,7 @@
                     </div>
                     <div class="optionsBlock__text">Подходит для тех, кто хочет уложиться  в ограниченный бюджет, либо
                         сделать ремонт под сдачу.</div>
-                    <div class="optionsBlock__button">
+                    <div class="optionsBlock__button btnBlue">
                         <a href="#">Рассчитать</a>
                     </div>
                 </div>
@@ -224,7 +233,7 @@
                     </div>
                     <div class="optionsBlock__text">Подходит для тех, кто точно знает, чего хочет, ориентирован
                         на максимальный результат при минимальных затратах.</div>
-                    <div class="optionsBlock__button">
+                    <div class="optionsBlock__button btnBlue">
                         <a href="#">Рассчитать</a>
                     </div>
                 </div>
@@ -248,7 +257,7 @@
                     </div>
                     <div class="optionsBlock__text">Подходит для тех, кто предпочитает доверить все профессионалам,
                         избавив себя от хлопот.</div>
-                    <div class="optionsBlock__button">
+                    <div class="optionsBlock__button btnBlue">
                         <a href="#">Рассчитать</a>
                     </div>
 
@@ -268,7 +277,8 @@
                     <div class="optionsBlock__descr">
                         <h4 class="title">Дизайн проект</h4>
                         <p class="price">2 500 руб./м2</p>
-                        <a class="href" href="#">Заказать<span><img src="./src/assets/images/arrowBlue.svg" alt=""></span></a>
+                        <a class="href" href="#">Заказать<span><img src="./src/assets/images/arrowBlue.svg"
+                                    alt=""></span></a>
                     </div>
                 </div>
                 <div class="optionsBlock detail">
@@ -280,7 +290,8 @@
                     <div class="optionsBlock__descr">
                         <h4 class="title">Технический проект</h4>
                         <p class="price">600 руб./м2</p>
-                        <a class="href" href="#">Заказать<span><img src="./src/assets/images/arrowBlue.svg" alt=""></span></a>
+                        <a class="href" href="#">Заказать<span><img src="./src/assets/images/arrowBlue.svg"
+                                    alt=""></span></a>
                     </div>
 
                 </div>
@@ -294,6 +305,8 @@
         </main>
     </div>
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <script type="module" src="./script.js"></script>
 </body>
 
 </html>

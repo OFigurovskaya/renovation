@@ -2,20 +2,26 @@
 @import './settings.scss';
 @import './colors.scss';
 
+
 .container {
-    min-width: 1512px;
-    border: 1px solid black;
+    min-width: 90%;
+    margin: 40px auto;
 }
+
+//calculation
 
 .calculation {
     background-color: #161616;
     display: grid;
     grid-template-columns: 2fr 5vw;
     padding: 0.5vh 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 66% 34%;
+        grid-template-columns: 68% 32%;
     }
 
     &__descr {
@@ -43,13 +49,13 @@
         content: url('./assets/images/lightning.svg');
         display: inline-flex;
         top: -5px;
-        right: 60px;
+        right: 4vw;
         position: absolute;
     }
 
     &__text2 {
         display: block;
-        padding: 5px;
+        padding: 5px 10px;
         border: 2px solid black;
         border-radius: 25px;
         background-color: #2D2D2D;
@@ -60,7 +66,9 @@
         border-radius: 10px;
         max-width: 11vw;
         position: relative;
-        padding: 0 auto;
+        font-size: calc($sizeindex * 0.51);
+        font-family: 'WixMadeforTextRegular';
+        cursor: pointer;
     }
 
     &__btn::after {
@@ -71,12 +79,202 @@
     }
 
 
-
-
     &__close {
         background-color: transparent;
         border: none;
         text-align: right;
         padding: 0 1.5vw 0 0;
+        cursor: pointer;
     }
 }
+
+//calculation end
+
+//header 
+
+.header {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr;
+    padding: 1.3vh 3.5vw;
+
+    &__logo {
+        display: grid;
+        grid-template-columns: 0.27fr 1fr;
+        align-items: center;
+    }
+
+
+    &__social {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        
+
+        .text {
+            display: inline-block;
+            text-align: right;
+            margin-right: 10px;
+        }
+    }
+
+
+    &__connection {
+        display: grid;
+        grid-template-columns: 1.6fr 1.3fr 0.7fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    &__phone {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 22px;
+    }
+
+    .phone {
+        display: grid;
+        grid-row: 1/3;
+        font-size: calc($sizeindex * 0.55);
+        font-weight: 600;
+    }
+
+    .chat {
+        display: grid;
+        grid-row: 1/3;
+        grid-column: 2/3;
+    }
+
+    &__consultation {
+        display: flex;
+        align-items: center;
+        padding: 3% 0 3% 3%;
+        width: 12vw;
+        justify-content: center;
+        gap: 5px;
+
+        .icons {
+            a:last-child {
+                margin-left: -5px;
+            }
+        }
+    }
+
+    &__menu {
+        margin: 0 auto;
+       
+
+        .wrapper {
+            color: $blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $grayLight;
+            border: 1px solid $grayLight;
+            border-radius: 12px;
+            padding: 20%;
+
+            p {
+                margin-right: 10px;
+                font-size: calc($sizeindex * 0.55);
+            }
+        }
+    }
+
+    .social {
+        display: flex;
+        gap: 7px;
+       
+    }
+}
+
+//header end
+
+//main
+//repair
+.repair {
+    position: relative;
+    
+
+    &__sliderBig {
+        background-image: url('./assets/images/SliderAll.png');
+        background-repeat: no-repeat;
+        background-color: #000;
+        background-position: right;
+        width: 100vw;
+        height: 592px;
+        border-radius: 55px;
+        position: absolute;
+    }
+
+    .slider {
+        background-image: url('./assets/images/Slider1.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 592px;
+        border-radius: 55px;
+        visibility: hidden;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .text-wrapper {
+        background-color: red;
+        z-index: 9999;
+        position: absolute;
+        padding: 5.5% 4%;
+    }
+
+    &__title {
+        color: white;
+        font-size: calc($sizeindex * 2.1);
+        font-family: 'WixMadeforDisplay-Bold';
+        width: 30vw;
+        line-height: 116%;
+        margin-bottom: 3vh;
+    }
+
+    &__descr {
+        color: white;
+        font-size: calc($sizeindex * 0.72);
+        font-family: 'WixMadeforText-Medium';
+        line-height: 140%;
+        width: 30vw;
+    }
+    
+
+    // .swiper-wrapper {
+    //     position: relative;
+    
+    //   }
+    
+    //   .swiper {
+    //     position: relative;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    
+    
+    //   .swiper-slide {
+    //     position: relative;
+    //     top: 0;
+    //     bottom: 0;
+    //     width: 100%;
+    //     padding: 0 10px;
+    //   }
+    
+    
+    //   .swiper-slide:nth-child(2n) {
+    //     background-image: url('./assets/images/Slider1.png');
+    //     background-repeat: no-repeat;
+    //     border-radius: 32px;
+    //     background-position: right;
+    //   }
+    
+    
+
+ 
+}
+
+
+@import './media.scss';
