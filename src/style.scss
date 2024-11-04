@@ -14,14 +14,14 @@
     background-color: #161616;
     display: grid;
     grid-template-columns: 2fr 5vw;
-    padding: 0.5vh 0;
+    padding: 0.6vh 0;
     position: fixed;
     top: 0;
     width: 100%;
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 68% 32%;
+        grid-template-columns: 65% 35%;
     }
 
     &__descr {
@@ -95,7 +95,7 @@
 .header {
     display: grid;
     grid-template-columns: 0.7fr 1fr 1fr;
-    padding: 1.3vh 3.5vw;
+    padding: 1.6vh 3.5vw;
 
     &__logo {
         display: grid;
@@ -194,8 +194,14 @@
 .repair {
     position: relative;
 
+    //slider + text
+    .slider-wrapper {
+        margin-bottom: 1vh;
+        position: relative;
+    }
 
     &__sliderBig {
+        display: flex;
         background-image: url('./assets/images/SliderAll.png');
         background-repeat: no-repeat;
         background-color: #000;
@@ -203,53 +209,103 @@
         width: 100vw;
         height: 592px;
         border-radius: 55px;
-        position: absolute;
+        position: relative;
     }
 
     .slider {
+        display: flex;
         background-image: url('./assets/images/Slider1.png');
         background-repeat: no-repeat;
         background-position: right;
         height: 592px;
         border-radius: 55px;
         visibility: hidden;
-        transition: 0.3s all ease-in-out;
+        position: absolute;
+        width: 100%;
     }
 
     .text-wrapper {
+        display: flex;
+        flex-direction: column;
         position: absolute;
         padding: 5.5% 4%;
         width: 90%;
+        z-index: 9999;
     }
 
     &__title {
         color: white;
-        font-size: calc($sizeindex * 2.1);
+        font-size: calc($sizeindex * 2.35);
         font-family: 'WixMadeforDisplay-Bold';
         width: 35%;
         line-height: 116%;
-        margin-bottom: 3vh;
+        margin-bottom: 4.5vh;
     }
 
     &__descr {
         color: white;
-        font-size: calc($sizeindex * 0.72);
+        font-size: calc($sizeindex * 0.81);
         font-family: 'WixMadeforText-Medium';
         line-height: 140%;
         width: 35%;
-        margin-bottom: 4vh;
+        margin-bottom: 5.5vh;
     }
 
     &__order {
         display: flex;
+        width: 35%;
         gap: 13px;
     }
 
     &__button {
-        width: 16%;
-        padding: 1.5% 0;
+        width: 45%;
+        padding: 4.5% 0;
         font-size: calc($sizeindex * 0.65);
         font-family: 'WixMadeforDisplay-Bold';
+    }
+    //slider + text end
+
+    //sting under slider
+
+    &__blocks {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        gap: 0.2vw;
+
+        .block {
+            background-color: $blocksColor;
+            border-radius: 25px;
+            flex-grow: 1;
+            width: 0%;
+            padding: 3% 3.2%;
+       
+            p {
+                font-family: 'WixMadeforTextRegular';
+                font-size: calc($sizeindex * 0.82);
+            }
+        }
+
+        .block:nth-child(2) {
+            background-image: url('./assets/images/repair__mеn.png');
+            background-repeat: no-repeat;
+            background-position: right top;
+            box-sizing: border-box;
+            background-size: 54%;
+            
+            p {
+                width: 15vw;
+            }
+
+         
+
+            img {
+                // position: absolute;
+                // top: 0;
+                // right: 0;
+                // bottom: 0;
+            }
+        }
     }
 
 }

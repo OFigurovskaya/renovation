@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "WixMadeforText-Medium";
   src: url("./assets/fonts/WixMadeforText-Medium.woff2") format("woff2"), url("./assets/fonts//WixMadeforText-Medium.woff") format("woff");
@@ -97,14 +98,14 @@ body {
   background-color: #161616;
   display: grid;
   grid-template-columns: 2fr 5vw;
-  padding: 0.5vh 0;
+  padding: 0.6vh 0;
   position: fixed;
   top: 0;
   width: 100%;
 }
 .calculation__wrapper {
   display: grid;
-  grid-template-columns: 68% 32%;
+  grid-template-columns: 65% 35%;
 }
 .calculation__descr {
   display: flex;
@@ -162,7 +163,7 @@ body {
 .header {
   display: grid;
   grid-template-columns: 0.7fr 1fr 1fr;
-  padding: 1.3vh 3.5vw;
+  padding: 1.6vh 3.5vw;
 }
 .header__logo {
   display: grid;
@@ -188,7 +189,8 @@ body {
 .header__phone {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  column-gap: 22px;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
 }
 .header .phone {
   display: grid;
@@ -237,7 +239,12 @@ body {
 .repair {
   position: relative;
 }
+.repair .slider-wrapper {
+  margin-bottom: 1vh;
+  position: relative;
+}
 .repair__sliderBig {
+  display: flex;
   background-image: url("./assets/images/SliderAll.png");
   background-repeat: no-repeat;
   background-color: #000;
@@ -245,49 +252,81 @@ body {
   width: 100vw;
   height: 592px;
   border-radius: 55px;
-  position: absolute;
+  position: relative;
 }
 .repair .slider {
+  display: flex;
   background-image: url("./assets/images/Slider1.png");
   background-repeat: no-repeat;
   background-position: right;
   height: 592px;
   border-radius: 55px;
   visibility: hidden;
-  transition: 0.3s all ease-in-out;
+  position: absolute;
+  width: 100%;
 }
 .repair .text-wrapper {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   padding: 5.5% 4%;
   width: 90%;
+  z-index: 9999;
 }
 .repair__title {
   color: white;
-  font-size: calc((1vw + 1vh) * 2.1);
+  font-size: calc((1vw + 1vh) * 2.35);
   font-family: "WixMadeforDisplay-Bold";
   width: 35%;
   line-height: 116%;
-  margin-bottom: 3vh;
+  margin-bottom: 4.5vh;
 }
 .repair__descr {
   color: white;
-  font-size: calc((1vw + 1vh) * 0.72);
+  font-size: calc((1vw + 1vh) * 0.81);
   font-family: "WixMadeforText-Medium";
   line-height: 140%;
   width: 35%;
-  margin-bottom: 4vh;
+  margin-bottom: 5.5vh;
 }
 .repair__order {
   display: flex;
+  width: 35%;
   gap: 13px;
 }
 .repair__button {
-  width: 16%;
-  padding: 1.5% 0;
+  width: 45%;
+  padding: 4.5% 0;
   font-size: calc((1vw + 1vh) * 0.65);
   font-family: "WixMadeforDisplay-Bold";
 }
-
+.repair__blocks {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  gap: 0.2vw;
+}
+.repair__blocks .block {
+  background-color: #F5F5F5;
+  border-radius: 25px;
+  flex-grow: 1;
+  width: 0%;
+  padding: 3% 3.2%;
+}
+.repair__blocks .block p {
+  font-family: "WixMadeforTextRegular";
+  font-size: calc((1vw + 1vh) * 0.82);
+}
+.repair__blocks .block:nth-child(2) {
+  background-image: url("./assets/images/repair__mеn.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  box-sizing: border-box;
+  background-size: 54%;
+}
+.repair__blocks .block:nth-child(2) p {
+  width: 15vw;
+}
 @media (min-width: 769px) and (max-width: 1250px) {
   body {
     background-color: red;
@@ -306,26 +345,58 @@ body {
   .header__consultation {
     width: 19vw;
   }
-}
-@media (min-width: 1900px) {
-  .calculation__text1::before {
-    margin-right: 80px;
+  .repair__sliderBig {
+    height: 434px;
+  }
+  .repair__sliderBig .slider {
+    height: 434px;
   }
   .repair__title {
     font-size: calc((1vw + 1vh) * 1.5);
     width: 70vw;
   }
   .repair__descr {
-    font-size: calc((1vw + 1vh) * 0.55);
+    font-size: calc((1vw + 1vh) * 0.7);
     width: 70vw;
     margin-bottom: 5%;
+  }
+  .repair__order {
+    width: 50%;
+    gap: 13px;
+  }
+}
+@media (min-width: 1760px) {
+  .calculation__text1::before {
+    margin-right: 80px;
+  }
+  .repair__title {
+    font-size: calc((1vw + 1vh) * 1.5);
+    width: 70vw;
+    margin-bottom: 7vh;
+  }
+  .repair__descr {
+    font-size: calc((1vw + 1vh) * 0.7);
+    width: 70vw;
+    margin-bottom: 9vh;
   }
   .repair .text-wrapper {
     padding: 2.5% 4%;
   }
   .repair__button {
-    padding: 1.2% 0;
+    padding: 5% 0;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
+@media (min-width: 2900px) {
+  .repair__title {
+    margin-bottom: 4vh;
+  }
+  .repair__descr {
+    margin-bottom: 5vh;
+  }
+  .repair .text-wrapper {
+    padding: 2.5% 4%;
+  }
+  .repair__button {
+    padding: 2.5% 0;
+  }
+}/*# sourceMappingURL=style.css.map */
