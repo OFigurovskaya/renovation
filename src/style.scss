@@ -193,9 +193,10 @@
 //repair
 .repair {
     position: relative;
+    margin-bottom: 13vh;
 
     //slider + text
-    .slider-wrapper {
+    .slider-wrapperB {
         margin-bottom: 1vh;
         position: relative;
     }
@@ -212,7 +213,7 @@
         position: relative;
     }
 
-    .slider {
+    .sliderB {
         display: flex;
         background-image: url('./assets/images/Slider1.png');
         background-repeat: no-repeat;
@@ -263,6 +264,7 @@
         font-size: calc($sizeindex * 0.65);
         font-family: 'WixMadeforDisplay-Bold';
     }
+
     //slider + text end
 
     //sting under slider
@@ -279,7 +281,7 @@
             flex-grow: 1;
             width: 0%;
             padding: 3% 3.2%;
-       
+
             p {
                 font-family: 'WixMadeforTextRegular';
                 font-size: calc($sizeindex * 0.82);
@@ -292,12 +294,12 @@
             background-position: right top;
             box-sizing: border-box;
             background-size: 54%;
-            
+
             p {
                 width: 15vw;
             }
 
-         
+
 
             img {
                 // position: absolute;
@@ -308,6 +310,82 @@
         }
     }
 
+    //sting under slider end
+
+}
+
+//repair end
+
+//prices
+
+.prices {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20%, repeat(6, 1fr);
+    padding: 0 3.5%;
+
+    &__header {
+        grid-column: 1/5;
+        display: flex;
+    }
+
+    &__title {
+        font-family: 'WixMadeforDisplay-Bold';
+        font-size: calc($sizeindex * 1.95);
+        width: 38%;
+    }
+
+    &__logo {
+        width: 63px;
+        height: 61px;
+        padding: 2% 0;
+    }
+
+    &__vektor {
+        width: 148px;
+        height: 71px;
+        padding: 1.5% 3%;
+    }
+
+    &__slider {
+        position: relative;
+        width: 200px;
+        height: 420px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 5% 0;
+    }
+
+    &__slider-wrapper {
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s ease-in-out;
+        gap: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__slider-prew,
+    &__slider-next {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+    }
+
+    &__slider-prew {
+        top: 0%;
+        left: 40%;
+    }
+
+    &__slider-next {
+        bottom: 0%;
+        left: 40%;
+        transform: rotate(180deg)
+    }
 }
 
 
