@@ -43,25 +43,14 @@ function nextSlide() {
     updateSlider();
 }
 
-// Функция для обновления отображения слайдера
-// function updateSlider() {
-//     slides.forEach((slide, index) => {
-// console.log(slides[slideIndex]);
-//       if (index === slideIndex ) {
-//         slide.style.display = 'block';
-//       } else {
-//         slide.style.display = 'none';
-//       }
-//     });
-//   }
-
 function updateSlider() {
     for(let i = 0; i <= slideIndex; i++) {
-        console.log(i);
-        if(i ===  slideIndex || i ===  slideIndex + 1 || i ===  slideIndex - 1) {
+        if((i ===  slideIndex - 1 || i ===  slideIndex  || i ===  slideIndex + 1)) {
             slides[i].style.display = 'block';
         } else {
             slides[i].style.display = 'none';
         }
     }
 }
+
+//slider three photo end

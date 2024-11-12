@@ -113,7 +113,7 @@ body {
 }
 .calculation__wrapper {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 68% 32%;
 }
 .calculation__descr {
   display: flex;
@@ -245,10 +245,9 @@ body {
 
 .repair {
   position: relative;
-  margin-bottom: 13vh;
+  margin-bottom: 9vh;
 }
 .repair .slider-wrapperB {
-  margin-bottom: 1vh;
   position: relative;
 }
 .repair__sliderBig {
@@ -283,19 +282,19 @@ body {
 }
 .repair__title {
   color: white;
-  font-size: calc((1vw + 1vh) * 2.35);
+  font-size: calc((1vw + 1vh) * 2.1);
   font-family: "WixMadeforDisplay-Bold";
   width: 35%;
   line-height: 116%;
-  margin-bottom: 4.5vh;
+  margin-bottom: 2.5vh;
 }
 .repair__descr {
   color: white;
-  font-size: calc((1vw + 1vh) * 0.81);
+  font-size: calc((1vw + 1vh) * 0.72);
   font-family: "WixMadeforText-Medium";
   line-height: 140%;
   width: 35%;
-  margin-bottom: 5.5vh;
+  margin-bottom: 4vh;
 }
 .repair__order {
   display: flex;
@@ -337,36 +336,41 @@ body {
 }
 .prices {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 20%, repeat(6, 1fr);
   padding: 0 3.5%;
 }
 .prices__header {
   grid-column: 1/5;
-  display: flex;
+  display: grid;
+  margin-bottom: 1.5vh;
+  grid-column: 1/4;
 }
 .prices__title {
   font-family: "WixMadeforDisplay-Bold";
-  font-size: calc((1vw + 1vh) * 1.95);
-  width: 38%;
+  font-size: calc((1vw + 1vh) * 1.75);
+  width: 104%;
+  grid-column: 1/3;
 }
 .prices__logo {
   width: 63px;
   height: 61px;
-  padding: 2% 0;
+  padding: 28px 57px;
+  grid-column: 3/4;
 }
 .prices__vektor {
   width: 148px;
   height: 71px;
-  padding: 1.5% 3%;
+  padding: 17% 0;
+  grid-column: 4/6;
 }
 .prices__slider {
   position: relative;
-  width: 200px;
-  height: 420px;
-  margin: 0 auto;
+  width: 150px;
+  height: 320px;
   overflow: hidden;
   padding: 5% 0;
+  grid-column: 1/2;
 }
 .prices__slider-wrapper {
   display: flex;
@@ -392,6 +396,19 @@ body {
   bottom: 0%;
   left: 40%;
   transform: rotate(180deg);
+}
+.prices__video {
+  width: 34vw;
+  text-align: center;
+  grid-column: 2/3;
+}
+.prices__video iframe {
+  border-radius: 50px;
+  padding: 3.5% 0;
+  border: 1px solid black;
+}
+.prices__sliderText {
+  grid-column: 3/5;
 }
 
 @media (min-width: 769px) and (max-width: 1250px) {
