@@ -19,6 +19,15 @@ function slide() {
 sliderBig.addEventListener('touchend', () => {
     toggle = !toggle;
 })
+
+
+sliderBig.addEventListener('mousedown', slide, false);
+
+
+sliderBig.addEventListener('mouseup', () => {
+    toggle = !toggle;
+})
+
 //slider one photo end
 
 //slider three photo
