@@ -339,12 +339,13 @@ body {
   grid-template-columns: repeat(7, 1fr);
   padding: 0 3.5%;
   column-gap: 10px;
+  grid-row-gap: 15px;
 }
 .prices__header {
   grid-column: 1/5;
   display: grid;
   margin-bottom: 1.5vh;
-  grid-column: 1/4;
+  grid-column: 1/5;
 }
 .prices__title {
   font-family: "WixMadeforDisplay-Bold";
@@ -452,6 +453,31 @@ body {
   display: flex;
   align-items: center;
   font-size: calc((1vw + 1vh) * 0.7);
+}
+.prices__excursion {
+  display: flex;
+  grid-column: 1/8;
+  padding: 1.6%;
+  border: 1px solid black;
+  border-radius: 25px;
+  background-color: #000;
+  color: #fff;
+  justify-content: space-between;
+}
+.prices__excursion .record {
+  width: 35%;
+}
+.prices__excursion .record__title {
+  font-size: calc((1vw + 1vh) * 1.1);
+  margin-bottom: 1.5vh;
+}
+.prices__excursion .record__text {
+  width: 72%;
+  font-size: calc((1vw + 1vh) * 0.6);
+}
+.prices__excursion .conctacts {
+  width: 60%;
+  display: grid;
 }
 
 @media (min-width: 769px) and (max-width: 1250px) {
