@@ -478,21 +478,55 @@
             width: 35%;
 
             &__title {
-              font-size: calc($sizeindex * 1.1);  
-              margin-bottom: 1.5vh;
+                font-size: calc($sizeindex * 1.1);
+                margin-bottom: 1.5vh;
             }
 
             &__text {
                 width: 72%;
-                font-size: calc($sizeindex * 0.6);  
+                font-size: calc($sizeindex * 0.6);
             }
-            
+
         }
 
         .conctacts {
             width: 60%;
             display: grid;
+            
+
+            .wrapper {
+
+
+                #conctacts__type {
+                    margin-right: -10px;
+                    height: 5vh;
+                    outline: none;
+                    padding: 0;
+                    border: 0;
+                    border-radius: 10px 0 0 10px;
+
+                    .wa {
+                        background: url('./assets/images/WA.svg');
+                    }
+
+                }
+
+                input {
+                    height: 5vh;
+                    outline: none;
+                    padding: 0;
+                    border: 0;
+                    text-align: center;
+                    border-radius: 0 10px 10px 0;
+                }
+
+                
+            }
+
         }
+
+
+
     }
 
 
