@@ -89,7 +89,7 @@ body {
   color: #FFFFFF;
   font-family: "WixMadeforText-Medium";
   font-size: calc((1vw + 1vh) * 0.5);
-  border-radius: 15px;
+  border-radius: 10px;
   border-color: #1455FD;
 }
 
@@ -463,6 +463,7 @@ body {
   background-color: #000;
   color: #fff;
   justify-content: space-between;
+  margin-bottom: 2vh;
 }
 .prices__excursion .record {
   width: 35%;
@@ -479,16 +480,11 @@ body {
   width: 60%;
   display: grid;
 }
-.prices__excursion .conctacts .wrapper #conctacts__type {
-  margin-right: -10px;
-  height: 5vh;
-  outline: none;
-  padding: 0;
-  border: 0;
-  border-radius: 10px 0 0 10px;
-}
-.prices__excursion .conctacts .wrapper #conctacts__type .wa {
-  background: url("./assets/images/WA.svg");
+.prices__excursion .conctacts .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 2vh;
 }
 .prices__excursion .conctacts .wrapper input {
   height: 5vh;
@@ -496,7 +492,31 @@ body {
   padding: 0;
   border: 0;
   text-align: center;
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
+  font-size: calc((1vw + 1vh) * 0.7);
+}
+.prices__excursion .conctacts__contract {
+  height: 5vh;
+  font-size: calc((1vw + 1vh) * 0.7);
+}
+.prices__excursion .conctacts__mess {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  height: 5vh;
+  outline: none;
+  border: 0;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #3B3B3B;
+  align-items: center;
+}
+.prices__excursion .conctacts .icons {
+  display: flex;
+  gap: 10px;
+}
+.prices__excursion .conctacts__check {
+  display: flex;
 }
 
 @media (min-width: 769px) and (max-width: 1250px) {
